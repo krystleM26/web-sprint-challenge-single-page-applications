@@ -1,6 +1,7 @@
 import React from "react";
 
 
+
 export default function Form(props) {
   const { handleSize, handleSauce, handleToppings, handleOrder } = props;
   console.log(props);
@@ -87,7 +88,16 @@ export default function Form(props) {
         <input type="text" name="name" placeholder="Additional Notes" />
       </label>
       </div>
+{/* Quantity */}
 
+<label>
+    <input
+    type="number"
+    name="number"
+    min="1"
+    max="100"
+    />
+</label>
       {/* Add to Cart Button */}
 <div className=" button">
 <button onClick={handleOrder}>Add to Order</button>
