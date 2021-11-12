@@ -8,8 +8,21 @@ function Home () => {
         <a> Help </a>
         
         </nav>
+
+        <div className="restaurants">
+        
+        <section>
+        <div className=box1></div>
+        <div className=box1></div>
+        <div className=box1></div>
+        <div className=box1></div>
+        
+        </section>
+        </div>
         
         
         </div>
     )
 }
+
+export default Home

@@ -3,7 +3,7 @@ import Form from "./components/Form.js";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-// import "./App.css";
+ import "./App.css";
 
 const initialPizza = {
   name: " ",
@@ -46,7 +46,7 @@ const App = () => {
         <Router>
           <nav className="navBar">
             <Link to="/">Home</Link>
-            <Link t0="/form">Pizza Order</Link>
+            <Link to="/form">Pizza Order</Link>
           </nav>
           <Switch>
             <Route path="/"/>
