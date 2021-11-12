@@ -1,26 +1,42 @@
 import React, {useState} from "react";
+import PizzaForm from "../components/PizzaForm";
+
 
 const intialPizza ={
-    name: string,
-    size: string,
-    topping1: bool,
-    topping2: bool,
-    special: string,
+    name: 'Pepperoni',
+    size: '8-inch',
+    // otopping1: bool,
+    // tpping2: bool,
+    special: '2-free toppings'
 }
-const [toppings, setToppings] = useState([""])
+
 
   
-}
+
 
 const App = () => {
-  const [pizza, setPizza] = useState [""]
-  const [toppings, setToppings] = useState([""])
+  const [pizza, setPizza] = useState(intialPizza)
+  // const [toppings, setToppings] = useState([""])
+
+
 
   return (
-    <>
-      <h1>Lambda Eats</h1>
+    <div className="pizzaApp">
+        <h1>Lambda Eats</h1>
       <p>You can remove this code and create your own header</p>
-    </>
-  );
-};
-export default App;
+      
+      {pizza.map((pizza, index) => {
+        <div key={index}>
+          {pizza.name} is a {pizza.type}
+            </div>
+      })}
+      
+<PizzaForm />
+      </div>
+  )    
+
+    
+       
+     
+}
+export default App
