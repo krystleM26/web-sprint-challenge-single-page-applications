@@ -1,14 +1,9 @@
 import React, {useState} from "react";
-import PizzaForm from "../components/PizzaForm";
 
 
-const intialPizza ={
-    name: 'Pepperoni',
-    size: '8-inch',
-    // otopping1: bool,
-    // tpping2: bool,
-    special: '2-free toppings'
-}
+
+
+
 
 
   
@@ -25,18 +20,16 @@ const App = () => {
         <h1>Lambda Eats</h1>
       <p>You can remove this code and create your own header</p>
       
-      {pizza.map((pizza, index) => {
-        <div key={index}>
-          {pizza.name} is a {pizza.type}
-            </div>
-      })}
-      
-<PizzaForm />
+      <Form /> 
+
       </div>
+     
   )    
 
-    
-       
+ 
+ 
      
 }
+
+
 export default App
