@@ -2,10 +2,12 @@ import React from 'react';
 
 
 export default function Form () {
+return (
 
-<form>
 
-// DropDown Menu //
+<div className="formInfo">
+
+{/* DropDown Menu */}
 <label> 
     Choice of size
     
@@ -20,7 +22,7 @@ export default function Form () {
 
 </label>
 
-// Radio Buttons //
+{/* Radio Buttons */}
 
 
 <label> 
@@ -62,7 +64,7 @@ export default function Form () {
     />
 </label>
 
-// Checkboxes //
+{/* Checkboxes */}
 
 <label>
     <input
@@ -73,9 +75,155 @@ export default function Form () {
     />
 </label>
 
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+<label>
+    <input
+    type="checkbox"
+    value="toppings"
+    name="pepperoni"
+    checked={values.pepperoni}
+    />
+</label>
+
+{/* Toggle */}
+<label class ="swtich"> Choice of Substitute
+    <input 
+    type="checkbox"/>
+    <span class ="slider"></span>
+</label>
+<label>
+<input 
+    type="checkbox"/>
+    <span class ="slider"></span>
+</label>
+
+{/* Notes */}
+<label>
+    <input
+    type="text"
+    name="name"
+    value={values.name}
+    placeholder="Special Notes"
+    />
+</label>
+
+{/* Add to Cart Button */}
+
+<button onClick={}>Add to Order</button>
 
 
 
-</form>
-    
 
+
+
+
+</div>
+)
+}
