@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Form from "./components/Form.js";
-import { Route, Link } from "react-router-dom";
-// import style from "./App.css";
+
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
+// import "./App.css";
 
 const initialPizza = {
   name: " ",
@@ -41,16 +43,17 @@ const App = () => {
       <header>
         <h1>Lambda Eats</h1>
         <p>It's Pizza Time!!</p>
-        {/* <nav>
-          <Link to="/">Home</Link>
-          <Link to="/form">Choose Your Pizza</Link>
-          <Link to="/pizza">Order is Placed</Link>
+        <Router>
+          <nav className="navBar">
+            <Link to="/">Home</Link>
+            <Link t0="/form">Pizza Order</Link>
           </nav>
-          <Route path="/pizza">
-         
-
-            <Pizza pizza={pizza} />
-            </Route> */}
+          <Switch>
+            <Route path="/"/>
+            <Route path="/form"/>
+            
+          </Switch>
+        </Router>
 
         {/* <div className="pizza-wrapper">
           <h2>{pizza.name}</h2>
