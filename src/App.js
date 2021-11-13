@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import Form from "./components/Form.js";
 import Home from "./components/Home";
 import * as yup from "yup";
-import schema from "./components/schema.js"
-
+import schema from "./components/schema.js";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
@@ -26,21 +25,20 @@ const initialFormErrors = {
 };
 
 const App = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [pizza, setPizza] = useState();
   const [sauce, setSauce] = useState("");
   const [toppings, setToppings] = useState([]);
-  const [size, setSize] = useState("asfasfas");
+  const [size, setSize] = useState("");
   const [order, setOrder] = useState([]);
   const [notes, setNotes] = useState("");
   const [formValues, setFormValues] = useState(initialPizza); // object
   const [formErrors, setFormErrors] = useState(initialFormErrors);
   const [disabled, setDisabled] = useState(false);
 
-
-  const handleName =( evt) => {
+  const handleName = (evt) => {
     setName(evt.target.value);
-  }
+  };
 
   const handleSauce = (evt) => {
     setSauce(evt.target.value);
@@ -49,41 +47,45 @@ const App = () => {
 
   const handleToppings = (evt) => {
     setToppings(evt.target.value);
+    console.log(toppings);
   };
 
   const handleSize = (evt) => {
-    console.log("call finc");
+    
     setSize(evt.target.value);
-    console.log(evt.target.value);
+    
   };
 
   const handleOrder = () => {
-    setOrder([...order, { size: size, sauce: sauce, notes: notes }]);
-    axios.post('https://reqres.in/api/orders', {size, sauce, notes, name})
-    .then(res => {
-      console.log(res.data)
-    })
-    .catch(err => {
-      console.error(err)
-    })
+    setOrder([...order, { size: size, sauce: sauce, notes: notes, toppings:toppings }]);
+    axios
+      .post("https://reqres.in/api/orders", { size, sauce, notes, name, order })
+      .then((res) => {
+        
+      })
+      .catch((err) => {
+        
+      });
   };
 
   const handleNotes = (evt) => {
     setNotes(evt.target.value);
-    console.log(evt.target.value);
+    
   };
-// Validation
+  // Validation
 
   const validate = (name, value) => {
-    yup.reach(schema, name).validate(value)
-      .then(() => setFormErrors({...formErrors, [name]:''}))
-      .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0]}))
-  }
+    yup
+      .reach(schema, name)
+      .validate(value)
+      .then(() => setFormErrors({ ...formErrors, [name]: "" }))
+      .catch((err) => setFormErrors({ ...formErrors, [name]: err.errors[0] }));
+  };
 
-  useEffect(() => {
-    // 🔥 STEP 9- ADJUST THE STATUS OF `disabled` EVERY TIME `formValues` CHANGES
-    schema.isValid(formValues).then(valid => setDisabled(!valid));
-  }, [formValues]);
+  // useEffect(() => {
+  //   // 🔥 STEP 9- ADJUST THE STATUS OF `disabled` EVERY TIME `formValues` CHANGES
+  //   schema.isValid(formValues).then((valid) => setDisabled(!valid));
+  // }, [formValues]);
 
   return (
     <div className="App">
@@ -92,8 +94,10 @@ const App = () => {
         <p>It's Pizza Time!!</p>
         <Router>
           <nav className="navBar">
-            <Link  to="/">Home</Link>
-            <Link id="order-pizza" to="/pizza">Pizza Order</Link>
+            <Link to="/">Home</Link>
+            <Link id="order-pizza" to="/pizza">
+              Pizza Order
+            </Link>
           </nav>
           <Switch>
             <Route exact path="/">
@@ -110,7 +114,7 @@ const App = () => {
                 size={size}
                 sauce={sauce}
                 errors={formErrors}
-                
+                toppings={toppings}
               />
             </Route>
           </Switch>

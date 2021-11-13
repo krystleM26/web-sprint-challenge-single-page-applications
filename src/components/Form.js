@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default function Form(props) {
   const {
     handleSize,
@@ -12,6 +11,7 @@ export default function Form(props) {
     handleNotes,
     errors,
     handleName,
+    toppings,
   } = props;
   console.log(props);
   return (
@@ -99,33 +99,55 @@ export default function Form(props) {
 
       <div className="toppings">
         <label>
-          {" "}
           Peppercorn
-          <input type="checkbox" name="pepperoni" onChange={handleToppings} />
+          <input
+            type="checkbox"
+            value="peppercorn"
+            name="toppings"
+            onChange={handleToppings}
+            checked={toppings === "peppercorn"}
+          />
         </label>
 
         <label>
-          {" "}
           Sausage
-          <input type="checkbox" name="pepperoni" onChange={handleToppings} />
+          <input
+            type="checkbox"
+            value="sausage"
+            name="toppings"
+            onChange={handleToppings}
+            checked={toppings === "sausage"}
+          />
         </label>
-
         <label>
-          {" "}
           Black Olives
-          <input type="checkbox" name="pepperoni" onChange={handleToppings} />
+          <input
+            type="checkbox"
+            value="black olives"
+            name="pepperoni"
+            onChange={handleToppings}
+            checked={toppings === "black olives"}
+          />
         </label>
-
         <label>
-          {" "}
           Artichoke Hearts
-          <input type="checkbox" name="pepperoni" onChange={handleToppings} />
+          <input
+            type="checkbox"
+            values="artichoke hearts"
+            name="pepperoni"
+            onChange={handleToppings}
+            checked={toppings === "artichoke hearts"}
+          />
         </label>
-
         <label>
-          {" "}
           Three Cheese
-          <input type="checkbox" name="pepperoni" onChange={handleToppings} />
+          <input
+            type="checkbox"
+            value="three cheese "
+            name="pepperoni"
+            onChange={handleToppings}
+            checked={toppings === "three cheese"}
+          />
         </label>
       </div>
 
