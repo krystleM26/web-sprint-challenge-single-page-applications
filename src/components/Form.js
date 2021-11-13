@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function Form(props) {
   const {
     handleSize,
@@ -10,20 +11,26 @@ export default function Form(props) {
     sauce,
     handleNotes,
     errors,
-    handleName
+    handleName,
   } = props;
   console.log(props);
   return (
     <div id="pizza-form" className="formInfo">
-       <div className="errors">
-          {/* 🔥 RENDER THE VALIDATION ERRORS HERE */}
-          <div>{errors.name}</div>
-          <div>{errors.type}</div>
-          <div>{errors.size}</div>
-        </div>
+      <div className="errors">
+        {/* 🔥 RENDER THE VALIDATION ERRORS HERE */}
+        <div>{errors.name}</div>
+        <div>{errors.type}</div>
+        <div>{errors.size}</div>
+      </div>
       {/* Name input */}
       <label>
-        <input id="name-input" type="text" name="name" minLength="2"  onChange={handleName}/>
+        <input
+          id="name-input"
+          type="text"
+          name="name"
+          minLength="2"
+          onChange={handleName}
+        />
       </label>
 
       {/* DropDown Menu */}

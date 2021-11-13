@@ -31,11 +31,80 @@
 .formInfo {
   display: flex;
   flex-direction: column;
-
 }
 
 .sauces {
- 
- flex-direction: column;
+  flex-direction: column;
   border: 2px solid blue;
 }
+
+nav {
+  background-color: #61dafb;
+
+  margin: 5px;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.homepage #home {
+  padding: 15px;
+  justify-content: flex-end;
+}
+
+#order-pizza {
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.restaurants {
+  background-color: blueviolet;
+  padding: 12px;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+   max-width: 100%;
+}
+
+.box1 {
+  margin: 15px;
+  padding: 35px;
+  background-color: green;
+}
+
+.box2 {
+  margin: 15px;
+  padding: 25px;
+  background-color: hotpink;
+}
+
+.box3 {
+  margin: 15px;
+  padding: 25px;
+  background-color: yellow;
+}
+
+.box4 {
+
+  margin: 15px;
+  padding: 25px;
+  background-color: teal;
+}
+.box5 {
+
+  margin: 15px;
+  padding: 25px;
+  background-color: red;
+}
+
+.box6 {
+
+  margin: 15px;
+  padding: 25px;
+  background-color: wheat;
+}
+
+
