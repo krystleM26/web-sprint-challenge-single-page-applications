@@ -1,28 +1,23 @@
-import React from 'react'
+import React from "react";
 
-function Home () => {
-    return (
-        <div className="homepage">
-        <nav>
+const Home = () => {
+  return (
+    <div className="homepage">
+      <nav>
         <a> Home </a>
         <a> Help </a>
-        
-        </nav>
+      </nav>
 
-        <div className="restaurants">
-        
+      <div className="restaurants">
         <section>
-        <div className=box1></div>
-        <div className=box1></div>
-        <div className=box1></div>
-        <div className=box1></div>
-        
+          <div className="box1"></div>
+          <div className="box2"></div>
+          <div className="box3"></div>
+          <div className="box4"></div>
         </section>
-        </div>
-        
-        
-        </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
